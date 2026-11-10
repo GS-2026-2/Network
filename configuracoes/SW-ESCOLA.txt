@@ -1,0 +1,122 @@
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname SW-ESCOLA
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ switchport access vlan 10
+ switchport mode access
+ mac-address 0212.0000.200d
+ spanning-tree portfast
+!
+interface FastEthernet0/2
+ switchport access vlan 20
+ switchport mode access
+ mac-address 0212.0000.200e
+ spanning-tree portfast
+!
+interface FastEthernet0/3
+ switchport access vlan 30
+ switchport mode access
+ mac-address 0212.0000.200f
+ spanning-tree portfast
+!
+interface FastEthernet0/4
+ mac-address 0212.0000.2010
+!
+interface FastEthernet0/5
+ mac-address 0212.0000.2011
+!
+interface FastEthernet0/6
+ mac-address 0212.0000.2012
+!
+interface FastEthernet0/7
+ mac-address 0212.0000.2013
+!
+interface FastEthernet0/8
+ mac-address 0212.0000.2014
+!
+interface FastEthernet0/9
+ mac-address 0212.0000.2015
+!
+interface FastEthernet0/10
+ mac-address 0212.0000.2016
+!
+interface FastEthernet0/11
+ mac-address 0212.0000.2017
+!
+interface FastEthernet0/12
+ mac-address 0212.0000.2018
+!
+interface FastEthernet0/13
+ mac-address 0212.0000.2019
+!
+interface FastEthernet0/14
+ mac-address 0212.0000.201a
+!
+interface FastEthernet0/15
+ mac-address 0212.0000.201b
+!
+interface FastEthernet0/16
+ mac-address 0212.0000.201c
+!
+interface FastEthernet0/17
+ mac-address 0212.0000.201d
+!
+interface FastEthernet0/18
+ mac-address 0212.0000.201e
+!
+interface FastEthernet0/19
+ mac-address 0212.0000.201f
+!
+interface FastEthernet0/20
+ mac-address 0212.0000.2020
+!
+interface FastEthernet0/21
+ mac-address 0212.0000.2021
+!
+interface FastEthernet0/22
+ mac-address 0212.0000.2022
+!
+interface FastEthernet0/23
+ mac-address 0212.0000.2023
+!
+interface FastEthernet0/24
+ mac-address 0212.0000.2024
+!
+interface GigabitEthernet0/1
+ switchport trunk allowed vlan 10,20,30
+ switchport mode trunk
+ mac-address 0212.0000.2025
+!
+interface GigabitEthernet0/2
+ mac-address 0212.0000.2026
+!
+interface Vlan1
+ no ip address
+!
+!
+!
+!
+line con 0
+!
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+!
+!
+!
+end
